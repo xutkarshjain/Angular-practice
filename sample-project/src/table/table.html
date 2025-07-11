@@ -1,9 +1,16 @@
+<input
+  (input)="onSearch()"
+  [(ngModel)]="searchText"
+  placeholder="Search by Name"
+/>
+<br />
+<br />
 <table>
   <thead>
     <th *ngFor="let col of tableColumns">{{ col.name }}</th>
   </thead>
   <tbody>
-    <tr *ngFor="let row of tableData">
+    <tr *ngFor="let row of filteredTableData">
       <td *ngFor="let col of tableColumns">
         <span *ngIf="col.value != 'action'; else deleteColumn">
           {{ row[col.value] }}
