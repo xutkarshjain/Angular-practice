@@ -1,0 +1,20 @@
+table {
+  font-size: large;
+  width: 50%;
+  border-bottom: 1px solid lightgray;
+}
+
+thead {
+  background-color: darkgray;
+  color: black;
+}
+
+td,
+th {
+  padding: 5px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: lightgray;
+}

@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <th *ngFor="let col of tableColumns">{{ col.name }}</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of tableData">
+      <td *ngFor="let col of tableColumns">
+        <span *ngIf="col.value != 'action'; else deleteColumn">
+          {{ row[col.value] }}
+        </span>
+        <ng-template #deleteColumn>
+          <!-- <span style="color: red; cursor: pointer">Delete</span> -->
+          <button style="color: red" (click)="deleteDataRow(row['id'])">
+            Delete
+          </button>
+        </ng-template>
+      </td>
+    </tr>
+  </tbody>
+</table>
