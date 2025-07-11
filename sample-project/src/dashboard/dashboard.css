@@ -1,0 +1,23 @@
+.card {
+  padding: 10px;
+  margin: 10px;
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: purple;
+  border-radius: 5px;
+  scale: 1;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  scale: 1.1;
+}
+
+.item-holder {
+  display: flex;
+  flex-wrap: wrap;
+}

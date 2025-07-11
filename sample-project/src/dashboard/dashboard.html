@@ -1,0 +1,8 @@
+<p>dashboard works!</p>
+<div class="parent" (click)="handleCardClickParent($event)">
+  <div class="item-holder" (click)="handleCardClick($event)">
+    <div *ngFor="let item of itemList" class="card" [attr.data-id]="item.id">
+      {{ item.name.toUpperCase() }}
+    </div>
+  </div>
+</div>
